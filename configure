@@ -1,6 +1,7 @@
 ================================
 ip
 ================================
+
 #show interfaces
 #configure terminal
 #interface oob
@@ -11,9 +12,11 @@ ip
 #exit
 #show ip interface brief
 #wr
+
 ================================
 ssh
 ================================
+
 #configure terminal
 #ip domain name domain.local
 #crypto key generate rsa
