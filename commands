@@ -1,0 +1,68 @@
+================================
+ip
+================================
+#show interfaces
+#configure terminal
+#interface oob
+#no shutdown
+#ip address dhcp
+  #ip adress 192.168.0.0 255.255.255.0
+#exit
+#exit
+#show ip interface brief
+#wr
+================================
+ssh
+================================
+#configure terminal
+#ip domain name domain.local
+#crypto key generate rsa
+#username admin privilege 15 password Pa$$w0rd
+#ip ssh version 2
+#ip ssh server
+#line vty 0 4
+  #transport input ssh
+  #login local
+#exit
+#wr
+================================
+snmp v1
+================================
+#configure terminal
+#snmp-server community public_deny RO
+#snmp-server community public_permit RO
+#exit
+#show snmp group
+================================
+access-list
+================================
+#configure terminal
+#ip address-list standard deny_any
+  #deny any
+  #exit
+#ip address-list standard permint_any
+  #permit any
+  #exit
+#exit
+#show access-lists
+================================
+snmp v2
+================================
+#configure terminal
+#snmp-server community public_deny deny_any
+#snmp-server community public_permit permit_any
+#exit
+#show snmp community
+================================
+snmp traps
+================================
+#configure terminal
+#snmp-sever enable traps syslog
+#snmp-sever enable traps tty
+#snmp-server host 192.168.0.1 traps 2c
+================================
+syslog
+================================
+#configure terminal
+#logging 192.168.0.1
+#logging trap
